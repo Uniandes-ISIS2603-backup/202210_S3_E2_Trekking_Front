@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'museums-front';
+
+  active_link = "home"
+
+  click(buttonClicked:any){
+    this.active_link = buttonClicked
+  }
 }

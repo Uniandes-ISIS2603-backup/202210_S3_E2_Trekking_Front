@@ -1,3 +1,37 @@
-* [lang^=en] {
-  color: green;
+.bold{
+  font-weight: bold;
+}
+
+.margin-vertical{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.dark-green-bg{
+  background-color: #006b42;
+}
+
+.light-green-bg{
+  background-color: #00b16d;
+}
+
+.nav-item > .active {
+  color: #005f3a;
+  font-weight: 500;
+}
+
+.nav-item > a:hover {
+  color: #008351;
+}
+
+a{
+  cursor: pointer;
+}
+
+.left-margin{
+  margin-left: 3%;
+}
+
+.tiny-left-margin{
+  margin-left: 2%;
 }
