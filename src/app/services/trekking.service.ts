@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { Itinerario } from '../model/trekking.model';
+import { Proveedor } from '../model/trekking.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,8 @@ export class TrekkingService {
 
   constructor(private http: HttpClient) { }
 
-  getItinerarios(): Observable<Itinerario[]> {
-    return this.http.get<Itinerario[]>(this.apiUrl);
+  getProveedores(): Observable<Proveedor[]> {
+    const urlProveedor = this.apiUrl + 'proveedores'
+    return this.http.get<Proveedor[]>(urlProveedor);
   }
 }

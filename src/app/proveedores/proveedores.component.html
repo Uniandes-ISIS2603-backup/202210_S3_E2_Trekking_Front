@@ -1,3 +1,11 @@
-<h2>
-  Vista de proveedores!
-</h2>
+<h3>
+  *filtro*
+</h3>
+<div class="container">
+  <div class="row justify-content-start">
+      <div class="col-3" *ngFor="let proveedor of proveedores">
+        <app-proveedor-card [proveedor]="proveedor" (click)="clickProveedor(proveedor)"></app-proveedor-card>
+      </div>
+  </div>
+</div>
+

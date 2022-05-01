@@ -6,6 +6,7 @@ import { SegurosComponent } from './seguros.component';
   imports: [
     CommonModule
   ],
-  declarations: [SegurosComponent]
+  declarations: [SegurosComponent],
+  exports: [SegurosComponent]
 })
 export class SegurosModule { }

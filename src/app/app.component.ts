@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Proveedor } from './model/trekking.model';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'museums-front';
-
+  title="trekking-front"
   active_link = "home"
+  proveedorSeleccionado: Proveedor = {} as Proveedor ;
 
   click(buttonClicked:any){
     this.active_link = buttonClicked
+  }
+
+  clickProveedor(proveedor: any){
+    console.log(proveedor)
+    this.active_link = "proveedor-detalle"
+    this.proveedorSeleccionado = proveedor;
   }
 }

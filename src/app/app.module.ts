@@ -3,23 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExpedicionesComponent } from './expediciones/expediciones.component';
-import { ProveedoresComponent } from './proveedores/proveedores.component';
-import { SegurosComponent } from './seguros/seguros.component';
-import { HomeComponent } from './home/home.component';
-
+import { ExpedicionesModule } from './expediciones/expediciones.module';
+import { ExpedicionDetalleModule } from './expedicion-detalle/expedicion-detalle.module';
+import { ProveedoresModule } from './proveedores/proveedores.module';
+import { ProveedorDetalleModule } from './proveedor-detalle/proveedor-detalle.module';
+import { SegurosModule } from './seguros/seguros.module';
+import { HomeModule } from './home/home.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-      ExpedicionesComponent,
-      ProveedoresComponent,
-      SegurosComponent,
-      HomeComponent
+    AppComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ProveedoresModule,
+    ProveedorDetalleModule,
+    ExpedicionesModule,
+    ExpedicionDetalleModule,
+    SegurosModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
