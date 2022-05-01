@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { TrekkingService } from '../services/trekking.service'
+import { Proveedor } from '../model/trekking.model';
 
 @Component({
   selector: 'app-proveedores',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProveedoresComponent implements OnInit {
 
-  constructor() { }
+  proveedores: Array<Proveedor> = [];
+  @Output() clickDetalle = new EventEmitter<Proveedor>();
+
+  constructor(private trekkingService: TrekkingService) { }
 
   ngOnInit() {
+    this.getProveedores()
   }
 
+  getProveedores(){
+    this.trekkingService.getProveedores().subscribe(proveedores => {
+      this.proveedores = proveedores
+      console.log(proveedores)
+    });
+  }
+
+  clickProveedor(proveedor:Proveedor){
+    this.clickDetalle.emit(proveedor);
+  }
 }

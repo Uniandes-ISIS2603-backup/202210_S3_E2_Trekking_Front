@@ -30,8 +30,10 @@
 <div class="container margin-vertical">
   <app-home *ngIf="active_link=='home'"></app-home>
   <app-expediciones *ngIf="active_link=='expediciones'"></app-expediciones>
-  <app-proveedores *ngIf="active_link=='proveedores'"></app-proveedores>
+  <app-proveedores *ngIf="active_link=='proveedores'" (clickDetalle)="clickProveedor($event)"></app-proveedores>
   <app-seguros *ngIf="active_link=='seguros'"></app-seguros>
+  <app-proveedor-detalle *ngIf="active_link=='proveedor-detalle'" [proveedor]="proveedorSeleccionado"></app-proveedor-detalle>
+  <app-expedicion-detalle *ngIf="active_link=='expedicion-detalle'"></app-expedicion-detalle>
 </div>
 
 <section>

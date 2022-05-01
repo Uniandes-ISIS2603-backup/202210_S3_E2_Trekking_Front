@@ -6,6 +6,7 @@ import { ExpedicionesComponent } from './expediciones.component';
   imports: [
     CommonModule
   ],
-  declarations: [ExpedicionesComponent]
+  declarations: [ExpedicionesComponent],
+  exports: [ExpedicionesComponent]
 })
 export class ExpedicionesModule { }
