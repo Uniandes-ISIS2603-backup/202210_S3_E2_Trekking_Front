@@ -1,9 +1,33 @@
 <div class="container">
-  <h2>
-    Vista detallada de un proveedor
-  </h2>
-  <br>
-  <h3>
-    Detalles de: {{proveedor.nombre}}
-  </h3>
+
+  <div class="row justify-content-start row-vertical margenes">
+    <div class="column size-img">
+      <img src="{{proveedor.foto.url}}" onerror="this.src='assets/images/person.png';" class="size-img" alt="">
+    </div>
+    <div class="col-3">
+        <h4>
+          <div class="margen-abajo">
+            Nombre:
+            {{proveedor.nombre}}
+          </div>
+          Experticia:
+          {{proveedor.experticia}}
+        </h4>
+    </div>
+  </div>
+
+  <div class="column">
+    <h5 class="margen-expediciones">
+      Expediciones:
+    </h5>
+    <div class="col-3" *ngFor="let expedicion of proveedor.expediciones">
+        <ul>
+          <li>
+            <app-expedicion-lista [expedicion]="expedicion"></app-expedicion-lista>
+          </li>
+        </ul>
+
+    </div>
+</div>
+
 </div>

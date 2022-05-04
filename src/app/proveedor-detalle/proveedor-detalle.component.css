@@ -1,0 +1,23 @@
+.size-img {
+  height: 200px;
+  width: 200px;
+  margin-right: 50px;
+}
+
+.row-vertical {
+  align-items: center;
+  justify-content: center;
+}
+
+.margenes{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.margen-abajo{
+  margin-bottom: 5px;
+}
+
+.margen-expediciones{
+  margin-bottom: 10px;
+}
