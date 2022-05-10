@@ -1,3 +1,10 @@
-<h2>
-  Vista de seguros!
-</h2>
+<h3>
+  *filtro*
+</h3>
+<div class="container">
+  <div class="row justify-content-start">
+      <div class="col-3" *ngFor="let seguro of seguros">
+        <app-seguro-card [Seguro]="seguro" (click)="clickSeguro(seguro)"></app-seguro-card>
+      </div>
+  </div>
+</div>
