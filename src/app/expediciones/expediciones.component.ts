@@ -26,8 +26,6 @@ export class ExpedicionesComponent implements OnInit {
   }
 
   clickExpedicion(expedicion:Expedicion){
-    console.log("Se presionó una expedicion")
-    console.log(expedicion)
     this.clickDetalle.emit(expedicion);
   }
 

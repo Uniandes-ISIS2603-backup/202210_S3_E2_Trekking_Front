@@ -38,6 +38,8 @@ export interface Expedicion{
   costo: number;
   mapa: Mapa
   fotos: Foto[]
+  itinerarios: Itinerario[]
+  recomendaciones: Recomendacion[]
 }
 
 export interface Mapa{
@@ -67,4 +69,9 @@ export interface Seguro {
   condiciones: Condicion[];
   caracteristicas: Caracteristica[];
   clientes:Cliente[];
+}
+export interface Recomendacion {
+  indumentaria: string;
+  equipo: string;
+  expedicion: Expedicion;
 }
