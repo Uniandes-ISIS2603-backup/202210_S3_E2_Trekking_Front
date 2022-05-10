@@ -1,9 +1,19 @@
 <div class="container">
-  <h2>
-    Vista detallada de una expedición
+  <h2 style = "text-align:center;">
+    Expedicion {{expedicion.nombre}}
   </h2>
   <br>
-  <h3>
-    Detalles de: {{expedicion.nombre}}
-  </h3>
+  <div class="container">
+    <div class="row justify-content-start">
+        <div>
+          <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
+        </div>
+        <div class="col-3" *ngFor="let itinerario of expedicion.itinerarios">
+
+        </div>
+        <div class="col-3" *ngFor="let recomendacion of expedicion.recomendaciones">
+
+        </div>
+    </div>
+  </div>
 </div>
