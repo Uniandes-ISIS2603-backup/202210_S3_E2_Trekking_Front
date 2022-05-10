@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Expedicion, Proveedor, Seguro } from './model/trekking.model';
+import { Expedicion, Proveedor, Seguro, Itinerario, Recomendacion } from './model/trekking.model';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,8 @@ export class AppComponent {
   seguroSeleccionado: Seguro = {} as Seguro;
   proveedorSeleccionado: Proveedor = {} as Proveedor;
   expedicionSeleccionada: Expedicion = {} as Expedicion;
+  itinerarioSeleccionado: Itinerario = {} as Itinerario;
+  recomendacionSeleccionada: Recomendacion = {} as Recomendacion;
 
   click(buttonClicked:any){
     this.active_link = buttonClicked
@@ -34,5 +36,17 @@ export class AppComponent {
     console.log(expedicion)
     this.active_link = "expedicion-detalle"
     this.expedicionSeleccionada = expedicion;
+  }
+
+  clickItinerario(itinerario: any){
+    console.log(itinerario)
+    this.active_link = "itinerario-detalle"
+    this.itinerarioSeleccionado = itinerario;
+  }
+
+  clickRecomendacion(recomendacion: any){
+    console.log(recomendacion)
+    this.active_link = "recomendacion-detalle"
+    this.recomendacionSeleccionada = recomendacion;
   }
 }

@@ -1,19 +1,31 @@
 <div class="container">
-  <h2 style = "text-align:center;">
-    Expedicion {{expedicion.nombre}}
+  <h2>
+    {{expedicion.nombre}}
   </h2>
   <br>
   <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Itinerarios</h2>
+        <ol>
+          <li *ngFor="let itinerario of expedicion.itinerarios" class="clickable" (click)="clickItinerario(itinerario)">
+            Itinerario del día {{itinerario.dia}}
+          </li>
+        </ol>
+      </div>
+      <div class="col">
+        <h2>Recomendaciones</h2>
+        <ol>
+          <li *ngFor="let recomendacion of expedicion.recomendaciones" class="clickable" (click)="clickRecomendacion(recomendacion)">
+            Recomendación {{recomendacion.id}}
+          </li>
+        </ol>
+      </div>
+    </div>
     <div class="row justify-content-start">
-        <div>
-          <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
-        </div>
-        <div class="col-3" *ngFor="let itinerario of expedicion.itinerarios">
-
-        </div>
-        <div class="col-3" *ngFor="let recomendacion of expedicion.recomendaciones">
-
-        </div>
+      <div>
+        <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
+      </div>
     </div>
   </div>
 </div>
