@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Expedicion, Itinerario, Recomendacion } from '../model/trekking.model';
 
 @Component({
@@ -9,11 +9,20 @@ import { Expedicion, Itinerario, Recomendacion } from '../model/trekking.model';
 export class ExpedicionDetalleComponent implements OnInit {
 
   @Input() public expedicion:Expedicion = {} as Expedicion;
-  itinerarios: Array<Itinerario> = [];
-  recomendacion: Array<Recomendacion> = [];
+  @Output() clickRecom = new EventEmitter<Recomendacion>();
+  @Output() clickItin = new EventEmitter<Itinerario>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickRecomendacion(recomendacion:Recomendacion){
+    this.clickRecom.emit(recomendacion);
+  }
+
+  clickItinerario(itinerario:Itinerario){
+    this.clickItin.emit(itinerario);
   }
 
 }

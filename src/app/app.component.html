@@ -33,7 +33,9 @@
   <app-proveedores *ngIf="active_link=='proveedores'" (clickDetalle)="clickProveedor($event)"></app-proveedores>
   <app-seguros *ngIf="active_link=='seguros'"></app-seguros>
   <app-proveedor-detalle *ngIf="active_link=='proveedor-detalle'" [proveedor]="proveedorSeleccionado"></app-proveedor-detalle>
-  <app-expedicion-detalle *ngIf="active_link=='expedicion-detalle'" [expedicion]="expedicionSeleccionada"></app-expedicion-detalle>
+  <app-expedicion-detalle *ngIf="active_link=='expedicion-detalle'" [expedicion]="expedicionSeleccionada" (clickRecom)="clickRecomendacion($event)" (clickItin)="clickItinerario($event)"></app-expedicion-detalle>
+  <app-recomendacion-detalle *ngIf="active_link=='recomendacion-detalle'" [recomendacion]="recomendacionSeleccionada"></app-recomendacion-detalle>
+  <app-itinerario-detalle *ngIf="active_link=='itinerario-detalle'" [itinerario]="itinerarioSeleccionado"></app-itinerario-detalle>
 </div>
 
 <section>
