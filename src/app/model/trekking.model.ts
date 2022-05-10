@@ -19,7 +19,6 @@ export interface Proveedor{
   telefono: number;
   tipoDocumento: string
   foto: Foto
-  //falta añadir expediciones que tiene un proveedor, sería: expediciones: Expedicion[]
   expediciones: Expedicion[]
 }
 
