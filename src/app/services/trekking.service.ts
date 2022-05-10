@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { Proveedor } from '../model/trekking.model';
-import { Seguro } from '../model/trekking.model';
+import { Expedicion, Proveedor, Seguro } from '../model/trekking.model';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,5 +21,10 @@ export class TrekkingService {
   getSeguros(): Observable<Seguro[]> {
     const urlProveedor = this.apiUrl + 'seguros'
     return this.http.get<Seguro[]>(urlProveedor);
+  }
+
+  getExpediciones(): Observable<Expedicion[]> {
+    const urlExpedicion = this.apiUrl + 'expediciones'
+    return this.http.get<Expedicion[]>(urlExpedicion);
   }
 }

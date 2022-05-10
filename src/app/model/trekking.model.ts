@@ -37,6 +37,7 @@ export interface Expedicion{
   dificultad: number;
   costo: number;
   mapa: Mapa
+  fotos: Foto[]
 }
 
 export interface Mapa{

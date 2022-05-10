@@ -1,3 +1,10 @@
 <h2>
-  Vista de expediciones!
+  FILTRO
 </h2>
+<div class="container">
+  <div class="row justify-content-start">
+      <div class="col-3" *ngFor="let expedicion of expediciones">
+        <app-expedicion-card [expedicion]="expedicion" (click)="clickExpedicion(expedicion)"></app-expedicion-card>
+      </div>
+  </div>
+</div>

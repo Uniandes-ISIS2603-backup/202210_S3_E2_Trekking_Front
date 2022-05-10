@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Expedicion } from '../model/trekking.model';
 
 @Component({
   selector: 'app-expedicion-detalle',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpedicionDetalleComponent implements OnInit {
 
+  @Input() public expedicion:Expedicion = {} as Expedicion;
   constructor() { }
 
   ngOnInit() {
