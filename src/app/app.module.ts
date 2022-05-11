@@ -12,6 +12,7 @@ import { RecomendacionDetalleModule } from './recomendacion-detalle/recomendacio
 import { SegurosModule } from './seguros/seguros.module';
 import { HomeModule } from './home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SeguroDetalleModule } from './seguro-detalle/seguro-detalle.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ExpedicionesModule,
     ExpedicionDetalleModule,
     SegurosModule,
+    SeguroDetalleModule,
     ItinerarioDetalleModule,
     RecomendacionDetalleModule,
     HomeModule
