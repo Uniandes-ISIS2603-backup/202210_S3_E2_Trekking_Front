@@ -1,6 +1,14 @@
-<div class="card" style="width: 13rem;">
-  <img src="{{expedicion.fotos[0].url}}" onerror="this.src='assets/images/person.png';" class="card-img-top" alt="">
+<div class="card">
+    <img src="{{imagenUrl}}" onerror="this.src='assets/images/paisaje.jpeg';" class="card-img-top" alt="">
   <div class="card-body">
-    <h5 class="card-title">{{expedicion.nombre}}</h5>
+    <div class = "titulo">
+      <h5 class="card-title" Style = "color: black; font-size: 1vw">{{expedicion.nombre}}</h5>
+    </div>
+  </div>
+  <div class = "capa">
+    <h3>Fecha Inicio</h3>
+    <p>{{expedicion.fechaInicio}}</p>
+    <h3>Fecha Fin</h3>
+    <p>{{expedicion.fechaFinal}}</p>
   </div>
 </div>

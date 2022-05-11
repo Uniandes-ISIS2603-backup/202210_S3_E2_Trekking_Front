@@ -1,9 +1,35 @@
 <div class="container">
   <h2>
-    Vista detallada de una expedición
+    {{expedicion.nombre}}
   </h2>
   <br>
-  <h3>
-    Detalles de: {{expedicion.nombre}}
-  </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Itinerarios</h2>
+        <ol>
+          <li *ngFor="let itinerario of expedicion.itinerarios" class="clickable" (click)="clickItinerario(itinerario)">
+            Itinerario del día {{itinerario.dia}}
+          </li>
+        </ol>
+      </div>
+      <div class="col">
+        <h2>Recomendaciones</h2>
+        <ol>
+          <li *ngFor="let recomendacion of expedicion.recomendaciones" class="clickable" (click)="clickRecomendacion(recomendacion)">
+            Recomendación {{recomendacion.id}}
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="row ">
+      <div>
+        <h2>Mapa</h2>
+        <div>
+          <app-mapa-card [expedicion]="expedicion" ></app-mapa-card>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>

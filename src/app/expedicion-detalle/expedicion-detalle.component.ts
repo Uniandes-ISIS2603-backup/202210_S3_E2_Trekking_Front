@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Expedicion } from '../model/trekking.model';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Expedicion, Itinerario, Recomendacion } from '../model/trekking.model';
 
 @Component({
   selector: 'app-expedicion-detalle',
@@ -9,9 +9,20 @@ import { Expedicion } from '../model/trekking.model';
 export class ExpedicionDetalleComponent implements OnInit {
 
   @Input() public expedicion:Expedicion = {} as Expedicion;
+  @Output() clickRecom = new EventEmitter<Recomendacion>();
+  @Output() clickItin = new EventEmitter<Itinerario>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickRecomendacion(recomendacion:Recomendacion){
+    this.clickRecom.emit(recomendacion);
+  }
+
+  clickItinerario(itinerario:Itinerario){
+    this.clickItin.emit(itinerario);
   }
 
 }

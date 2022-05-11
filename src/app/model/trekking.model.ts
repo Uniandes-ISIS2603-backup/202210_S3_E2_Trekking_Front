@@ -1,7 +1,4 @@
 // interfaces modelo
-
-import { SeguroCardComponent } from "../components/seguro-card/seguro-card.component";
-
 export interface Itinerario{
   id : number;
   dia: string;
@@ -38,6 +35,8 @@ export interface Expedicion{
   costo: number;
   mapa: Mapa
   fotos: Foto[]
+  itinerarios: Itinerario[]
+  recomendaciones: Recomendacion[]
 }
 
 export interface Mapa{
@@ -68,3 +67,17 @@ export interface Seguro {
   caracteristicas: Caracteristica[];
   clientes:Cliente[];
 }
+export interface Recomendacion {
+  id: number;
+  indumentaria: string;
+  equipo: string;
+  expedicion: Expedicion;
+}
+
+export interface Mapa{
+  id: number;
+  latitud : number;
+  longitud : number;
+
+}
+

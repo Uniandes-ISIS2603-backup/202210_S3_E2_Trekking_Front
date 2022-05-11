@@ -9,10 +9,11 @@ import { Expedicion } from '../../model/trekking.model';
 export class ExpedicionCardComponent implements OnInit {
 
   @Input() public expedicion:Expedicion = {} as Expedicion;
+  imagenUrl="";
 
   constructor() { }
 
   ngOnInit() {
+    this.imagenUrl = this.expedicion.fotos.length == 0 ? "" : this.expedicion.fotos[0].url;
   }
-
 }
