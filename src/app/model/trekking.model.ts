@@ -73,3 +73,11 @@ export interface Recomendacion {
   equipo: string;
   expedicion: Expedicion;
 }
+
+export interface Mapa{
+  id: number;
+  latitud : number;
+  longitud : number;
+
+}
+

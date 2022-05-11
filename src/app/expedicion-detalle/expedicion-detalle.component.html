@@ -22,9 +22,13 @@
         </ol>
       </div>
     </div>
-    <div class="row justify-content-start">
+    <div class="row ">
       <div>
-        <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
+        <h2>Mapa</h2>
+        <div>
+          <app-mapa-card [expedicion]="expedicion" ></app-mapa-card>
+        </div>
+
       </div>
     </div>
   </div>
