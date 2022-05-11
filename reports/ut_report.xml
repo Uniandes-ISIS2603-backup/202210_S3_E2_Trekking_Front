@@ -1,7 +1,10 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="47"/>
-    <testCase name="AppComponent should render title" duration="11"/>
-    <testCase name="AppComponent should have as title 'museums-front'" duration="6"/>
+    <testCase name="AppComponent should have as title 'museums-front'" duration="116"/>
+    <testCase name="AppComponent should create the app" duration="13"/>
+    <testCase name="AppComponent should render title" duration="29"/>
+  </file>
+  <file path="src/app/proveedor-detalle/proveedor-detalle.component.spec.ts">
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
   </file>
 </testExecutions>
