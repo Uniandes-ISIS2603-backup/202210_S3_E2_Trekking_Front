@@ -10,6 +10,7 @@ import { ProveedorDetalleModule } from './proveedor-detalle/proveedor-detalle.mo
 import { SegurosModule } from './seguros/seguros.module';
 import { HomeModule } from './home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SeguroDetalleModule } from './seguro-detalle/seguro-detalle.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ExpedicionesModule,
     ExpedicionDetalleModule,
     SegurosModule,
-    HomeModule
+    HomeModule,
+    SeguroDetalleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
