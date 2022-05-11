@@ -27,7 +27,7 @@ import { SeguroDetalleModule } from './seguro-detalle/seguro-detalle.module';
     ExpedicionesModule,
     ExpedicionDetalleModule,
     SegurosModule,
-    SeguroDetalleModule
+    SeguroDetalleModule,
     ItinerarioDetalleModule,
     RecomendacionDetalleModule,
     HomeModule
