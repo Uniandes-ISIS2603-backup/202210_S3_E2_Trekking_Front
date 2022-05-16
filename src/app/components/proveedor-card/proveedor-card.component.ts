@@ -9,9 +9,11 @@ import { Proveedor } from '../../model/trekking.model';
 export class ProveedorCardComponent implements OnInit {
 
   @Input() public proveedor:Proveedor = {} as Proveedor;
+  imagenUrl="";
 
   constructor() { }
   ngOnInit() {
+    this.imagenUrl = this.proveedor.foto === null ? "" : this.proveedor.foto.url;
   }
 
 }

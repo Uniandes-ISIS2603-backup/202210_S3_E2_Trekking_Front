@@ -1,0 +1,10 @@
+<h4>
+  <app-filtro></app-filtro>
+</h4>
+<div class="container">
+  <div class="row justify-content-start">
+      <div class="col-3" *ngFor="let seguro of seguros">
+        <app-seguro-card [Seguro]="seguro" (click)="clickSeguro(seguro)" routerLink="/seguros/{{seguro.id}}"></app-seguro-card>
+      </div>
+  </div>
+</div>

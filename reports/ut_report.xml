@@ -1,22 +1,22 @@
 <testExecutions version="1">
   <file path="src/app/seguros/seguros.component.spec.ts">
     <testCase name="ProveedorDetalleComponent should create" duration="2"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="58"/>
-    <testCase name="AppComponent should have as title 'museums-front'" duration="8"/>
+    <testCase name="AppComponent should render title" duration="68"/>
+    <testCase name="AppComponent should have as title 'museums-front'" duration="6"/>
     <testCase name="AppComponent should create the app" duration="5"/>
   </file>
   <file path="src/app/seguros/seguros.component.spec.ts">
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
