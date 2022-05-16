@@ -22,9 +22,6 @@ const shadowUrl = 'assets/marker-shadow.png';
 })
 export class MapaCardComponent implements OnInit {
 
-
-
-
   @Input() public expedicion:Expedicion = {} as Expedicion;
 
 
@@ -75,9 +72,6 @@ export class MapaCardComponent implements OnInit {
       attribution: '&copy; <a href="https://1938.com.es">Web Inteligencia Artificial</a>'
     });
 
-
-
-
   //ruta
   L.Routing.control({
     router: L.Routing.osrmv1({
@@ -91,12 +85,4 @@ export class MapaCardComponent implements OnInit {
   }).addTo(map);
     tiles.addTo(map);
   }
-
-
-
-
-
-
-
-
 }

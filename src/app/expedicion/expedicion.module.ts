@@ -6,6 +6,7 @@ import { FiltroModule } from '../components/filtro/filtro.module';
 import { ExpedicionRoutingModule } from './expedicion-routing.module';
 import { ExpedicionGaleriaModule } from '../components/expedicion-galeria/expedicion-galeria.module';
 import { ExpedicionDetalleComponent } from './expedicion-detalle/expedicion-detalle.component';
+import { MapaModule } from '../components/mapa-card/mapa-card.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { ExpedicionDetalleComponent } from './expedicion-detalle/expedicion-deta
     ExpedicionCardModule,
     FiltroModule,
     ExpedicionRoutingModule,
-    ExpedicionGaleriaModule
+    ExpedicionGaleriaModule,
+    MapaModule
   ],
   declarations: [ExpedicionListComponent,ExpedicionDetalleComponent],
   exports: [ExpedicionListComponent]

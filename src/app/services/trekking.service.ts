@@ -33,6 +33,11 @@ export class TrekkingService {
     return this.http.get<Proveedor>(urlProveedor + '/' + proveedorId);
   }
 
+  getProveedoresExpedicion(expedicionId:string): Observable<Proveedor[]> {
+    const urlExpedicion = this.apiUrl + 'expediciones'
+    return this.http.get<Proveedor[]>(urlExpedicion + '/' + expedicionId + '/proveedores');
+  }
+
   getSeguro(seguroId:string){
     const urlSeguro = this.apiUrl + 'seguros'
     return this.http.get<Seguro>(urlSeguro + '/' + seguroId);
@@ -49,7 +54,7 @@ export class TrekkingService {
   }
 
   getExpedicion(expedicionId:string){
-    const urlProveedor = this.apiUrl + 'expediciones'
-    return this.http.get<Expedicion>(urlProveedor + '/' + expedicionId);
+    const urlExpedicion = this.apiUrl + 'expediciones'
+    return this.http.get<Expedicion>(urlExpedicion + '/' + expedicionId);
   }
 }
