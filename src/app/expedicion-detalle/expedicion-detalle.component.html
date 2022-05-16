@@ -1,11 +1,9 @@
-<div class="container1">
+<div class="container">
   <h2>
     {{expedicion.nombre}}
   </h2>
   <br>
-  <div>
-    <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
-  </div>
+  <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
   <div class="container">
     <div class="row">
       <div class="col-6 col-sm-3">
@@ -47,9 +45,10 @@
   </div>
   <br>
   <br>
+</div>
   <div class="container">
     <div class="row">
-      <div class="col-6 col-sm-3">
+      <div class="col">
         <h2>Itinerarios</h2>
         <ol>
           <li *ngFor="let itinerario of expedicion.itinerarios" class="clickable" (click)="clickItinerario(itinerario)">
@@ -57,7 +56,7 @@
           </li>
         </ol>
       </div>
-      <div class="col-6 col-sm-3">
+      <div class="col">
         <h2>Recomendaciones</h2>
         <ol>
           <li *ngFor="let recomendacion of expedicion.recomendaciones" class="clickable" (click)="clickRecomendacion(recomendacion)">
@@ -68,10 +67,9 @@
   </div>
     <div>
       <h2>Mapa</h2>
-      <div>
+      <!-- <div>
         <app-mapa-card [expedicion]="expedicion" ></app-mapa-card>
-    </div>
+      </div> -->
     </div>
   </div>
-</div>
 

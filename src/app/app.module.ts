@@ -13,6 +13,7 @@ import { SegurosModule } from './seguros/seguros.module';
 import { HomeModule } from './home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SeguroDetalleModule } from './seguro-detalle/seguro-detalle.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SeguroDetalleModule } from './seguro-detalle/seguro-detalle.module';
     SeguroDetalleModule,
     ItinerarioDetalleModule,
     RecomendacionDetalleModule,
-    HomeModule
+    HomeModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

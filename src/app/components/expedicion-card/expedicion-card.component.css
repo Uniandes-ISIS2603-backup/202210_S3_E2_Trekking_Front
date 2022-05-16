@@ -18,7 +18,7 @@
 
 }
 
-.card:hover >.capa h3{
+.card:hover >.capa h5{
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -67,7 +67,7 @@
   visibility: hidden;
 }
 
-.capa h3{
+.capa h5{
   color: white;
   font-weight: 400;
   margin-bottom: 120px;
