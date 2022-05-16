@@ -22,6 +22,7 @@ export interface Proveedor{
 }
 
 export interface Expedicion{
+  id: number;
   nombre: string;
   fechaInicio: string;
   fechaFinal: string;
@@ -45,23 +46,27 @@ export interface Mapa{
 
 
 export interface Condicion {
+  id: number;
   descripcion : String;
   seguro: Seguro;
 }
 
 
 export interface Caracteristica {
+  id: number;
   descripcion : String;
   seguro: Seguro;
 }
 
 export interface Cliente{
+  id: number;
   nombre: String;
   apellido: String;
   seguros: Seguro[];
   expediciones: Expedicion[];
 }
 export interface Seguro {
+  id: number;
   nombre:string;
   condiciones: Condicion[];
   caracteristicas: Caracteristica[];

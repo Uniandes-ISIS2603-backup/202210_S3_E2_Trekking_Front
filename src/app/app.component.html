@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand bold tiny-left-margin" (click)="click('home')">Trekking Inc.</a>
+    <a class="navbar-brand bold tiny-left-margin" (click)="click('home')"
+    routerLink="/home">Trekking Inc.</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,35 +13,23 @@
         </li>
         <li class="nav-item left-margin">
           <a class="nav-link" (click)="click('expediciones')"
-          [ngClass]="active_link=='expediciones' ? 'active' : ''" routerLink="/expediciones">Expediciones</a>
+          [ngClass]="active_link=='expediciones' ? 'active' : ''" routerLink="/expediciones/list">Expediciones</a>
         </li>
         <li class="nav-item left-margin">
           <a class="nav-link" (click)="click('proveedores')"
-          [ngClass]="active_link=='proveedores' ? 'active' : ''" routerLink="/proveedores">Proveedores</a>
+          [ngClass]="active_link=='proveedores' ? 'active' : ''" routerLink="/proveedores/list">Proveedores</a>
         </li>
         <li class="nav-item left-margin">
           <a class="nav-link" (click)="click('seguros')"
-          [ngClass]="active_link=='seguros' ? 'active' : ''" routerLink="/seguros">Seguros</a>
+          [ngClass]="active_link=='seguros' ? 'active' : ''" routerLink="/seguros/list">Seguros</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- <div class="container margin-vertical">
-  <app-home *ngIf="active_link=='home'"></app-home>
-  <app-expediciones *ngIf="active_link=='expediciones'" (clickDetalle)="clickExpedicion($event)"></app-expediciones>
-  <app-proveedores *ngIf="active_link=='proveedores'" (clickDetalle)="clickProveedor($event)"></app-proveedores>
-  <app-seguros *ngIf="active_link=='seguros'" (clickDetalle)="clickSeguro($event)"></app-seguros>
-  <app-proveedor-detalle *ngIf="active_link=='proveedor-detalle'" [proveedor]="proveedorSeleccionado"></app-proveedor-detalle>
-  <app-seguro-detalle *ngIf="active_link=='seguro-detalle'" [seguro]="seguroSeleccionado"></app-seguro-detalle>
-  <app-expedicion-detalle *ngIf="active_link=='expedicion-detalle'" [expedicion]="expedicionSeleccionada" (clickRecom)="clickRecomendacion($event)" (clickItin)="clickItinerario($event)"></app-expedicion-detalle>
-  <app-recomendacion-detalle *ngIf="active_link=='recomendacion-detalle'" [recomendacion]="recomendacionSeleccionada"></app-recomendacion-detalle>
-  <app-itinerario-detalle *ngIf="active_link=='itinerario-detalle'" [itinerario]="itinerarioSeleccionado"></app-itinerario-detalle>
-</div> -->
-
 <!-- Main Router Outlet -->
-<div class="container-fluid" id="principal">
+<div class="container margin-vertical">
   <div class="row">
     <div class="col-md-12">
       <div>
@@ -52,17 +41,6 @@
 
 <section>
   <footer class="text-center text-white fixed-bottom dark-green-bg">
-    <!-- <div class="container p-3 pb-0">
-      <section class="">
-        <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Regístrate gratis</span>
-          <button type="button" class="btn btn-outline-light btn-rounded">
-            Sign up
-          </button>
-        </p>
-      </section>
-    </div> -->
-
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright:
       <a class="text-white" href="https://uniandes.edu.co/">uniandes.edu.co</a>
