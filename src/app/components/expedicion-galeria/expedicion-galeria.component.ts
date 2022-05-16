@@ -12,12 +12,13 @@ export class ExpedicionGaleriaComponent implements OnInit {
 
 
   @Input() public fotos:Foto[] = {} as Foto[];
-  constructor(config: NgbCarouselConfig) {
-    config.interval = 2000;
-    config.wrap = true;
-    config.keyboard = false;
-    config.pauseOnHover = false;
-  }
+  constructor() {}
+  // constructor(config: NgbCarouselConfig) {
+  //   config.interval = 2000;
+  //   config.wrap = true;
+  //   config.keyboard = false;
+  //   config.pauseOnHover = false;
+  // }
 
   ngOnInit() {
     console.log()

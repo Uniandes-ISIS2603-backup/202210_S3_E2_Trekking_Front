@@ -1,6 +1,8 @@
 <testExecutions version="1">
-  <file path="src/app/seguros/seguros.component.spec.ts">
-    <testCase name="ProveedorDetalleComponent should create" duration="2"/>
+  <file path="src/app/seguro/seguro-list/seguro-list.component.spec.ts">
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
@@ -12,13 +14,11 @@
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="68"/>
+    <testCase name="AppComponent should create the app" duration="51"/>
+    <testCase name="AppComponent should render title" duration="9"/>
     <testCase name="AppComponent should have as title 'museums-front'" duration="6"/>
-    <testCase name="AppComponent should create the app" duration="5"/>
   </file>
-  <file path="src/app/seguros/seguros.component.spec.ts">
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+  <file path="src/app/seguro/seguro-list/seguro-list.component.spec.ts">
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>

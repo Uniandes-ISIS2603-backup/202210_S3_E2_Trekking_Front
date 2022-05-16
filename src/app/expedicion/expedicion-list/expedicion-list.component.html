@@ -1,11 +1,12 @@
-<h4>
+<div class="container margin-top-bottom">
   <app-filtro></app-filtro>
-</h4>
-<div class="container">
-  <div class="row justify-content-start">
+<div>
+  <div class="row justify-content-start margin-top">
       <div class="col-3" *ngFor="let expedicion of expediciones">
         <app-expedicion-card [expedicion]="expedicion" (click)="clickExpedicion(expedicion)" routerLink="/expediciones/{{expedicion.id}}"></app-expedicion-card>
       </div>
   </div>
 </div>
+</div>
+
 

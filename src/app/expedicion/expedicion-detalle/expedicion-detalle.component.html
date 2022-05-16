@@ -1,77 +1,191 @@
-<div class="container">
-  <h2>
-    {{expedicion.nombre}}
-  </h2>
-  <br>
-  <app-expedicion-galeria [fotos]="expedicion.fotos" ></app-expedicion-galeria>
+<!-- Masthead-->
+<header class="masthead" [ngStyle]="{'background-image': 'url('+expedicion.fotos[0].url+')'}">
   <div class="container">
-    <div class="row">
-      <div class="col-6 col-sm-3">
-        <h2>Fecha de inicio</h2>
-        {{expedicion.fechaInicio}}
+      <div class="masthead-subheading">¡Bienvenido a la expedición!</div>
+      <div class="masthead-heading text-uppercase">{{expedicion.nombre}}</div>
+      <a class="btn btn-primary btn-xl text-uppercase">Inscribirte</a>
+  </div>
+</header>
+<!-- Descripcion -->
+<section class="page-section tiny-padding" id="about">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Descripción</h2>
+          <h3 class="section-subheading text-muted">{{expedicion.descripcion}}</h3>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Fecha de finalización</h2>
-        {{expedicion.fechaFinal}}
+  </div>
+</section>
+<!-- Información -->
+<section class="page-section bg-light">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Información</h2>
+          <h3 class="section-subheading text-muted">de la expedición</h3>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Duración</h2>
-        {{expedicion.duracion}}
+      <div class="row text-center">
+          <div class="col">
+              <span>
+                  <img src="https://freeiconshop.com/wp-content/uploads/edd/clock-flat.png" class="ochenta-image">
+              </span>
+              <h4 class="my-3">Duración</h4>
+              <p class="text-muted">{{expedicion.duracion}} días</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://www.pngkit.com/png/full/402-4029809_vanmates-money-icon-3-01-rakuten-warriors-logo.png" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Costo</h4>
+              <p class="text-muted">{{expedicion.costo}}$</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://d3dhrbkwcpstav.cloudfront.net/wp-content/uploads/sites/174/2020/10/Universal-Accessibility-200x200-Icon.png" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Dificultad</h4>
+              <p class="text-muted">{{expedicion.dificultad}}</p>
+          </div>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Descripción</h2>
-        {{expedicion.descripcion}}
+  </div>
+</section>
+<!-- Fecha y hora-->
+<section class="page-section">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Fecha y Hora</h2>
+          <h3 class="section-subheading text-muted">de la expedición</h3>
       </div>
-
-      <div class="w-100"></div>
-
-      <div class="col-6 col-sm-3">
-        <h2>Lugar de salida y hora</h2>
-        {{expedicion.lugarSalida}}{{expedicion.horaSalida}}
+      <div class="row text-center">
+          <div class="col">
+              <span>
+                  <img src="https://www.iconbunny.com/icons/media/catalog/product/3/2/3296.9-date-time-icon-iconbunny.jpg" class="ochenta-image">
+              </span>
+              <h4 class="my-3">Fecha de salida</h4>
+              <p class="text-muted">{{expedicion.fechaInicio}}</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://icon-library.com/images/time-sheet-icon/time-sheet-icon-4.jpg" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Hora de salida</h4>
+              <p class="text-muted">{{expedicion.horaSalida}}</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://www.iconbunny.com/icons/media/catalog/product/3/2/3296.9-date-time-icon-iconbunny.jpg" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Fecha de llegada</h4>
+              <p class="text-muted">{{expedicion.fechaFinal}}</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://icon-library.com/images/time-sheet-icon/time-sheet-icon-4.jpg" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Hora de llegada</h4>
+              <p class="text-muted">{{expedicion.horaLlegada}}</p>
+          </div>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Lugar de llegada y hora</h2>
-        {{expedicion.lugarLlegada}}{{expedicion.horaLlegada}}
+  </div>
+</section>
+<!-- Lugar -->
+<section class="page-section bg-light">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Lugar</h2>
+          <h3 class="section-subheading text-muted">de la expedición</h3>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Dificultad</h2>
-        {{expedicion.dificultad}}
+      <div class="row text-center">
+          <div class="col">
+              <span>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3SYFIoWUnqOMxoubo5cPXO3Le1h_BLGrKhw&usqp=CAU" class="ochenta-image">
+              </span>
+              <h4 class="my-3">Lugar de salida</h4>
+              <p class="text-muted">{{expedicion.lugarSalida}}</p>
+          </div>
+          <div class="col">
+            <span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3SYFIoWUnqOMxoubo5cPXO3Le1h_BLGrKhw&usqp=CAU" class="ochenta-image">
+            </span>
+              <h4 class="my-3">Lugar de llegada</h4>
+              <p class="text-muted">{{expedicion.lugarLlegada}}</p>
+          </div>
       </div>
-      <div class="col-6 col-sm-3">
-        <h2>Costo</h2>
-        {{expedicion.costo}}
+  </div>
+</section>
+<!-- Proveedores -->
+<section class="page-section" id="team">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Proveedores</h2>
+          <h3 class="section-subheading text-muted">para ti</h3>
       </div>
+      <div class="row">
+        <div class="col" *ngFor="let proveedor of proveedores">
+            <div class="team-member clickable" routerLink="/proveedores/{{proveedor.id}}">
+                <img class="mx-auto rounded-circle" src="{{proveedor.foto.url}}" alt="..." />
+                <h4>{{proveedor.nombre}}</h4>
+                <p class="text-muted">Experticia: {{proveedor.experticia}}</p>
+            </div>
+        </div>
     </div>
   </div>
-  <br>
-  <br>
+</section>
+
+<!-- itinerarios -->
+<section class="page-section bg-light">
+  <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Itinerarios</h2>
+        <h3 class="section-subheading text-muted">de la expedicion</h3>
+    </div>
+    <main class="leaderboard__profiles">
+      <article class="leaderboard__profile" *ngFor="let itinerario of expedicion.itinerarios; let i=index"
+      routerLink="/itinerarios/{{itinerario.id}}">
+        <span class="leaderboard__name">{{i+1}}</span>
+        <span class="leaderboard__value">{{itinerario.dia}}</span>
+      </article>
+    </main>
+  </div>
+</section>
+
+<!-- recomendaciones -->
+<section class="page-section">
+  <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Recomendaciones</h2>
+        <h3 class="section-subheading text-muted">de la expedicion</h3>
+    </div>
+    <main class="leaderboard__profiles">
+      <article class="leaderboard__profile" *ngFor="let recomendacion of expedicion.recomendaciones; let i=index"
+      routerLink="/recomendaciones/{{recomendacion.id}}">
+        <span class="leaderboard__name">{{i+1}}</span>
+        <span class="leaderboard__value">Recomendación</span>
+      </article>
+    </main>
+  </div>
+</section>
+
+<!-- galeria -->
+<section class="page-section bg-light">
+  <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Galería</h2>
+    </div>
+  <app-expedicion-galeria [fotos]="expedicion.fotos"></app-expedicion-galeria>
+  </div>
+</section>
+
+<!-- mapa -->
+<section class="page-section">
+  <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Mapa</h2>
+    </div>
+    <app-mapa-card [expedicion]="expedicion" ></app-mapa-card>
+  </div>
+</section>
+
+<!-- flechita -->
+<div class="to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+  <img src="https://cdn-icons-png.flaticon.com/512/137/137497.png" alt="to-top-icon" class="cincuenta-image"/>
 </div>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>Itinerarios</h2>
-        <ol>
-          <li *ngFor="let itinerario of expedicion.itinerarios" class="clickable"
-          (click)="clickItinerario(itinerario)" routerLink="/itinerarios/{{itinerario.id}}">
-            Itinerario del día {{itinerario.dia}}
-          </li>
-        </ol>
-      </div>
-      <div class="col">
-        <h2>Recomendaciones</h2>
-        <ol>
-          <li *ngFor="let recomendacion of expedicion.recomendaciones" class="clickable"
-          (click)="clickRecomendacion(recomendacion)" routerLink="/recomendaciones/{{recomendacion.id}}">
-            Recomendación {{recomendacion.id}}
-          </li>
-        </ol>
-      </div>
-  </div>
-    <div>
-      <h2>Mapa</h2>
-      <!-- <div>
-        <app-mapa-card [expedicion]="expedicion" ></app-mapa-card>
-      </div> -->
-    </div>
-  </div>
 
