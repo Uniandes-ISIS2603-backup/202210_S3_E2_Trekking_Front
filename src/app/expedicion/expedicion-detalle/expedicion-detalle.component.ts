@@ -42,6 +42,7 @@ export class ExpedicionDetalleComponent implements OnInit {
     window.addEventListener('scroll', () => {
       this.windowScrolled = window.pageYOffset !== 0;
     });
+    this.scrollToTop()
   }
 
   scrollToTop(): void {

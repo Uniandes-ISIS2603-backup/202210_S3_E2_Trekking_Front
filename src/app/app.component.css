@@ -6,6 +6,19 @@
   background-color: #006b42;
 }
 
+.top-margin{
+  padding-top: 3.8rem;
+}
+
+.a{
+  background-color: #006b42;
+}
+
+.bg-translucent {
+  --bs-bg-opacity: 0.98;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .light-green-bg{
   background-color: #00b16d;
 }

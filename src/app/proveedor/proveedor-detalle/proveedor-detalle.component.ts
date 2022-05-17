@@ -30,6 +30,11 @@ export class ProveedorDetalleComponent implements OnInit {
         this.getProveedor();
       }
     }
+    this.scrollToTop()
+  }
+
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
   }
 
 }
