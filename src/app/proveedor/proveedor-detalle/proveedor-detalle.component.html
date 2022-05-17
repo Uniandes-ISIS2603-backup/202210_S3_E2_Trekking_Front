@@ -1,5 +1,4 @@
-<section class="no-margin" id="team">
-  <div class = "margen-jesu">
+<section class="tiny-padding-bottom" id="team">
       <div class="row">
         <div class = "col">
             <div class="page-section team-member">
@@ -11,9 +10,10 @@
             </div>
         </div>
         <div class = "col">
-          <section class="page-section">
+          <section class="page-section margin-right">
               <div class="text-center">
                   <h2 class="section-heading text-uppercase">Expediciones</h2>
+                  <h3 class="section-subheading text-muted">del proveedor</h3>
               </div>
               <main class="leaderboard__profiles">
                 <article class="leaderboard__profile" *ngFor="let expedicion of proveedor.expediciones; let i=index"
@@ -25,14 +25,13 @@
           </section>
         </div>
       </div>
-  </div>
 </section>
 
-<section class="page-section bg-light">
+<section class="page-section bg-light tiny-padding">
   <div class="container">
       <div class="text-center">
           <h2 class="section-heading text-uppercase">Información</h2>
-          <h3 class="margen-iconos text-muted">del proveedor</h3>
+          <h3 class="section-subheading text-muted">del proveedor</h3>
       </div>
       <div class="row text-center">
           <div class="col">
@@ -61,7 +60,8 @@
 </section>
 
 <!-- Contact-->
-<section class="page-section" id="contact">
+<div class="d-flex justify-content-center">
+  <section class="page-section width-50" id="contact">
   <div class="container">
       <div class="text-center">
           <h2 class="texto-contacto text-uppercase">Contacta personalmente a</h2>
@@ -74,7 +74,7 @@
       <!-- To make this form functional, sign up at-->
       <!-- https://startbootstrap.com/solution/contact-forms-->
       <!-- to get an API token!-->
-      <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+      <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="contact">
           <div class="row align-items-stretch mb-5">
               <div class="col-md-6">
                   <div class="form-group">
@@ -115,8 +115,10 @@
           <!-- an error submitting the form-->
           <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
           <!-- Submit Button-->
-          <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled down-margin" id="submitButton" type="submit">Enviar Mensaje</button></div>
+          <div class="text-center"><button class="btn btn-primary btn-xl dark-green-bg text-uppercase disabled down-margin" id="submitButton" type="submit">Enviar Mensaje</button></div>
       </form>
   </div>
 </section>
+</div>
+
 
