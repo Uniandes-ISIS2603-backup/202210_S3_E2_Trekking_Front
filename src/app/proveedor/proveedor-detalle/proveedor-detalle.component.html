@@ -1,6 +1,7 @@
 <section class="tiny-padding-bottom" id="team">
+  <div class="container">
       <div class="row">
-        <div class = "col">
+        <div class = "col-lg">
             <div class="page-section team-member">
                 <div class="text-center margin-foto">
                   <h2 class="section-heading text-uppercase ">{{ proveedor.nombre }}</h2>
@@ -9,8 +10,8 @@
                 <img class="mx-auto rounded-circle" src="{{proveedor.foto.url}}" alt="..." />
             </div>
         </div>
-        <div class = "col">
-          <section class="page-section margin-right">
+        <div class = "col-lg">
+          <div style="width:100%"><section class="page-section">
               <div class="text-center">
                   <h2 class="section-heading text-uppercase">Expediciones</h2>
                   <h3 class="section-subheading text-muted">del proveedor</h3>
@@ -22,9 +23,10 @@
                   <span class="leaderboard__value">{{expedicion.nombre}}</span>
                 </article>
               </main>
-          </section>
+          </section></div>
         </div>
       </div>
+    </div>
 </section>
 
 <section class="page-section bg-light tiny-padding">
@@ -64,27 +66,20 @@
   <section class="page-section width-50" id="contact">
   <div class="container">
       <div class="text-center">
-          <h2 class="texto-contacto text-uppercase">Contacta personalmente a</h2>
+          <h2 class="texto-contacto text-uppercase">Contacta a</h2>
           <h3 class="nombre-contacto text-muted">{{proveedor.nombre}}</h3>
       </div>
-      <!-- * * * * * * * * * * * * * * *-->
-      <!-- * * SB Forms Contact Form * *-->
-      <!-- * * * * * * * * * * * * * * *-->
-      <!-- This form is pre-integrated with SB Forms.-->
-      <!-- To make this form functional, sign up at-->
-      <!-- https://startbootstrap.com/solution/contact-forms-->
-      <!-- to get an API token!-->
       <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="contact">
           <div class="row align-items-stretch mb-5">
               <div class="col-md-6">
                   <div class="form-group">
                       <!-- Name input-->
-                      <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                      <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
                       <div class="invalid-feedback" data-sb-feedback="name:required">Se necesita ingresar un nomnre.</div>
                   </div>
                   <div class="form-group">
                       <!-- Email address input-->
-                      <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                      <input class="form-control" id="email" type="email" placeholder="Correo" data-sb-validations="required,email" />
                       <div class="invalid-feedback" data-sb-feedback="email:required">Se necesita ingresar un Email.</div>
                       <div class="invalid-feedback" data-sb-feedback="email:email">El Email no es correcto.</div>
                   </div>
@@ -92,15 +87,12 @@
               <div class="col-md-6">
                   <div class="form-group form-group-textarea mb-md-0">
                       <!-- Message input-->
-                      <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                      <textarea class="form-control" id="message" placeholder="Mensaje" data-sb-validations="required"></textarea>
                       <div class="invalid-feedback" data-sb-feedback="message:required">Se necesita ingresar un mensaje.</div>
                   </div>
               </div>
           </div>
           <!-- Submit success message-->
-          <!---->
-          <!-- This is what your users will see when the form-->
-          <!-- has successfully submitted-->
           <div class="d-none" id="submitSuccessMessage">
               <div class="text-center text-white mb-3">
                   <div class="fw-bolder">Form submission successful!</div>
@@ -110,9 +102,6 @@
               </div>
           </div>
           <!-- Submit error message-->
-          <!---->
-          <!-- This is what your users will see when there is-->
-          <!-- an error submitting the form-->
           <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
           <!-- Submit Button-->
           <div class="text-center"><button class="btn btn-primary btn-xl dark-green-bg text-uppercase disabled down-margin" id="submitButton" type="submit">Enviar Mensaje</button></div>
@@ -120,5 +109,3 @@
   </div>
 </section>
 </div>
-
-
