@@ -34,15 +34,25 @@ export class MapaCardComponent implements OnInit {
   }
 
   getLatitud() : number{
-    return this.expedicion.mapa.latitud;
+    return this.expedicion.mapa.latitud1;
   }
 
   getLongitud() : number{
-    return this.expedicion.mapa.longitud;
+    return this.expedicion.mapa.longitud1;
+  }
+
+  getLatitud2() : number{
+    return this.expedicion.mapa.latitud2;
+  }
+
+  getLongitud2() : number{
+    return this.expedicion.mapa.longitud2;
   }
 
   ngOnInit() {
     this.initMap();
+    console.log(this.expedicion.mapa.latitud1);
+    console.log(this.expedicion.mapa.longitud1);
   }
 
   private initMap(): void {
@@ -52,6 +62,24 @@ export class MapaCardComponent implements OnInit {
       attributionControl: false,
       zoom: 14
     });
+
+
+    //ruta entre los dos puntos
+
+    L.Routing.control({
+      waypoints: [
+         L.latLng(this.getLatitud(), this.getLongitud()),
+         L.latLng(this.getLatitud2(), this.getLongitud2()) ],
+
+        showAlternatives: false,
+        fitSelectedRoutes: true,
+        show: false,
+        routeWhileDragging: false,
+        useZoomParameter: true
+
+      }).addTo(map);
+
+
 
     //iconos personalizados
     var iconDefault = L.icon({
@@ -72,17 +100,7 @@ export class MapaCardComponent implements OnInit {
       attribution: '&copy; <a href="https://1938.com.es">Web Inteligencia Artificial</a>'
     });
 
-  //ruta
-  L.Routing.control({
-    router: L.Routing.osrmv1({
-      serviceUrl: `https://router.project-osrm.org/route/v1/`
-    }),
-    showAlternatives: true,
-    fitSelectedRoutes: false,
-    show: false,
-    routeWhileDragging: true,
 
-  }).addTo(map);
     tiles.addTo(map);
   }
 }

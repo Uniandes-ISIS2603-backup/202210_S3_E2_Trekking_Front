@@ -81,8 +81,10 @@ export interface Recomendacion {
 
 export interface Mapa{
   id: number;
-  latitud : number;
-  longitud : number;
+  latitud1 : number;
+  longitud1 : number;
+  latitud2 : number;
+  longitud2 : number;
 
 }
 
