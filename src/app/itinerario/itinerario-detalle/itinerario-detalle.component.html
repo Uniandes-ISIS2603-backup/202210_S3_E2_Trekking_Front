@@ -1,14 +1,24 @@
 <div class="container">
-  <h2>
+  <img style = "margin-top: 2rem; margin-left: 30rem;"src="../../assets/images/itinerario.png">
+  <h2 style = "color: #37B08A; font-size: 4rem; margin-left: 8.5rem; margin-top: 2rem;">
     Itinerario del día {{itinerario.dia}}
   </h2>
   <br>
   <div class="container">
-    <h3>
-      Alimentación {{itinerario.alimentacion}}
-    </h3>
-    <h3>
-      Alojamiento {{itinerario.alojamiento}}
-    </h3>
+    <div style = "background-color: rgb(236, 236, 236); border-radius: 2rem; align-items: center;">
+      <img style = "margin-left: 28.8rem; width: 8rem; padding-top: 1rem; padding-bottom: 1rem; "src="../../assets/images/comida.png">
+      <h3 style = "text-align: center;">
+        Alimentación
+      </h3>
+      <p style = "text-align: center; padding-bottom: 1rem;">{{itinerario.alimentacion}}</p>
+    </div>
+
+    <div style = "background-color: rgb(236, 236, 236); border-radius: 2rem; margin-bottom: 5rem;">
+      <img style = "margin-left: 28.8rem; width: 8rem; padding-top: 1rem; padding-bottom: 1rem;"src="../../assets/images/cama.png">
+      <h3 style = "text-align: center;">
+        Alojamiento
+      </h3>
+      <p style = "text-align: center; padding-bottom: 1rem;">{{itinerario.alojamiento}}</p>
+    </div>
   </div>
 </div>
