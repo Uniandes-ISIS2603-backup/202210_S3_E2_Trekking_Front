@@ -1,53 +1,57 @@
-<div class="container">
-
-  <div class="row justify-content-start row-vertical margenes">
-    <div class="column size-img">
-      <img src="this.src='assets/images/escudoseguros.png';" onerror="this.src='assets/images/escudoseguros.png';" class="card-img-top" alt="">
+<section class="tiny-padding-bottom" id="team">
+  <div class="container">
+      <div class="row">
+        <div class = "col-lg">
+            <div class="page-section team-member">
+                <div class="text-center margin-foto">
+                  <h2 class="section-heading text-uppercase ">{{seguro.nombre }}</h2>
+                  <h3 class="section-subheading text-muted">seguro</h3>
+                </div>
+                <img class="mx-auto rounded-circle" src="this.src='assets/images/escudoseguros.png';" onerror="this.src='assets/images/escudoseguros.png';" alt="..." />
+            </div>
+        </div>
+        <div class = "col-lg">
+          <div style="width:100%"><section class="page-section">
+              <div class="text-center">
+                  <h2 class="section-heading text-uppercase">Caracteristicas</h2>
+                  <h3 class="section-subheading text-muted">seguro</h3>
+              </div>
+              <main class="leaderboard__profiles">
+                <article class="leaderboard__profile" *ngFor="let caracteristica of seguro.caracteristicas; let i=index"
+                routerLink="/caracteristicas/{{caracteristica.id}}">
+                  <span class="leaderboard__name">{{i+1}}. </span>
+                  <span class="leaderboard__value">{{caracteristica.descripcion}}</span>
+                </article>
+              </main>
+          </section></div>
+        </div>
+      </div>
     </div>
-    <div class="col-3">
-        <h4>
-          <div class="margen-abajo">
-            {{seguro.nombre}}
-          </div>
-
-        </h4>
+</section>
+<hr>
+<section class="tiny-padding-bottom" id="team">
+  <div class="container">
+      <div class="row">
+        <div class = "col-lg">
+          <div style="width:100%"><section class="page-section">
+              <div class="text-center">
+                  <h2 class="section-heading text-uppercase">Condiciones</h2>
+                  <h3 class="section-subheading text-muted">seguro</h3>
+              </div>
+              <main class="leaderboard__profiles">
+                <article class="leaderboard__profile" *ngFor="let condicion of seguro.condiciones; let i=index"
+                routerLink="/condiciones{{condicion.id}}">
+                <ul>
+                  <li>
+                    <app-condiciones-lista [condicion]="condicion"></app-condiciones-lista>
+                  </li>
+                </ul>
+                </article>
+              </main>
+          </section></div>
+        </div>
+      </div>
     </div>
-  </div>
+</section>
 
-  <div class="column">
-    <h5 class="margen-expediciones">
-      Clientes:
-    </h5>
-    <div class="col-3" *ngFor="let cliente of seguro.clientes">
-        <ul>
-          <li>
-            <app-clientes-lista [cliente]="cliente"></app-clientes-lista>
-          </li>
-        </ul>
-
-    </div>
-    <h5 class="margen-expediciones">
-      Caracteristicas:
-    </h5>
-    <div class="col-3" *ngFor="let caracteristica of seguro.caracteristicas">
-      <ul>
-        <li>
-          <app-caracteristicas-lista [caracteristica]="caracteristica"></app-caracteristicas-lista>
-        </li>
-      </ul>
-
-    </div>
-    <h5 class="margen-expediciones">
-      Condiciones:
-    </h5>
-    <div class="col-3" *ngFor="let condicion of seguro.condiciones">
-      <ul>
-        <li>
-          <app-condiciones-lista [condicion]="condicion"></app-condiciones-lista>
-        </li>
-      </ul>
-
-    </div>
-</div>
-
-</div>
+<hr>
