@@ -5,53 +5,96 @@
             <div class="page-section team-member">
                 <div class="text-center margin-foto">
                   <h2 class="section-heading text-uppercase ">{{seguro.nombre }}</h2>
-                  <h3 class="section-subheading text-muted">seguro</h3>
                 </div>
                 <img class="mx-auto rounded-circle" src="this.src='assets/images/escudoseguros.png';" onerror="this.src='assets/images/escudoseguros.png';" alt="..." />
             </div>
         </div>
+
         <div class = "col-lg">
           <div style="width:100%"><section class="page-section">
               <div class="text-center">
                   <h2 class="section-heading text-uppercase">Caracteristicas</h2>
-                  <h3 class="section-subheading text-muted">seguro</h3>
               </div>
-              <main class="leaderboard__profiles">
-                <article class="leaderboard__profile" *ngFor="let caracteristica of seguro.caracteristicas; let i=index"
+              <main>
+                <article *ngFor="let caracteristica of seguro.caracteristicas; let i=index"
                 routerLink="/caracteristicas/{{caracteristica.id}}">
-                  <span class="leaderboard__name">{{i+1}}. </span>
-                  <span class="leaderboard__value">{{caracteristica.descripcion}}</span>
-                </article>
+                <ul>
+                  <li>
+                    <span class="leaderboard__value">{{caracteristica.descripcion}}</span>
+                  </li>
+                </ul>
+              </article>
               </main>
           </section></div>
         </div>
-      </div>
-    </div>
-</section>
-<hr>
-<section class="tiny-padding-bottom" id="team">
-  <div class="container">
-      <div class="row">
+
         <div class = "col-lg">
           <div style="width:100%"><section class="page-section">
               <div class="text-center">
                   <h2 class="section-heading text-uppercase">Condiciones</h2>
-                  <h3 class="section-subheading text-muted">seguro</h3>
               </div>
-              <main class="leaderboard__profiles">
-                <article class="leaderboard__profile" *ngFor="let condicion of seguro.condiciones; let i=index"
+              <main>
+                <article *ngFor="let condicion of seguro.condiciones; let i=index"
                 routerLink="/condiciones{{condicion.id}}">
                 <ul>
                   <li>
-                    <app-condiciones-lista [condicion]="condicion"></app-condiciones-lista>
+                    <app-condiciones-lista class="leaderboard__value" [condicion]="condicion"></app-condiciones-lista>
                   </li>
                 </ul>
                 </article>
               </main>
           </section></div>
         </div>
+
       </div>
     </div>
 </section>
 
-<hr>
+<!-- Contact-->
+<div class="d-flex justify-content-center bg-light">
+  <section class="page-section width-50 bg-light" id="contact">
+  <div class="container bg-light">
+      <div class="text-center">
+          <h2 class="texto-contacto text-uppercase">Contacta a</h2>
+          <h3 class="nombre-contacto text-muted">{{seguro.nombre}}</h3>
+      </div>
+      <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="contact">
+          <div class="row align-items-stretch mb-5">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <!-- Name input-->
+                      <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
+                      <div class="invalid-feedback" data-sb-feedback="name:required">Se necesita ingresar un nomnre.</div>
+                  </div>
+                  <div class="form-group">
+                      <!-- Email address input-->
+                      <input class="form-control" id="email" type="email" placeholder="Correo" data-sb-validations="required,email" />
+                      <div class="invalid-feedback" data-sb-feedback="email:required">Se necesita ingresar un Email.</div>
+                      <div class="invalid-feedback" data-sb-feedback="email:email">El Email no es correcto.</div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group form-group-textarea mb-md-0">
+                      <!-- Message input-->
+                      <textarea class="form-control" id="message" placeholder="Mensaje" data-sb-validations="required"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="message:required">Se necesita ingresar un mensaje.</div>
+                  </div>
+              </div>
+          </div>
+          <!-- Submit success message-->
+          <div class="d-none" id="submitSuccessMessage">
+              <div class="text-center text-white mb-3">
+                  <div class="fw-bolder">Form submission successful!</div>
+                  To activate this form, sign up at
+                  <br />
+                  <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+              </div>
+          </div>
+          <!-- Submit error message-->
+          <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+          <!-- Submit Button-->
+          <div class="text-center"><button class="btn btn-primary btn-xl dark-green-bg text-uppercase disabled down-margin" id="submitButton" type="submit">Enviar Mensaje</button></div>
+      </form>
+  </div>
+</section>
+</div>
