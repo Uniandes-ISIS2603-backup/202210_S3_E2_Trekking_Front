@@ -7,7 +7,7 @@ import { TrekkingService } from '../../services/trekking.service'
   styleUrls: ['./seguro-list.component.css']
 })
 export class SeguroListComponent implements OnInit {
-
+  filterpost = '';
   seguros: Array<Seguro> = [];
   @Output() clickDetalle = new EventEmitter<Seguro>();
 
