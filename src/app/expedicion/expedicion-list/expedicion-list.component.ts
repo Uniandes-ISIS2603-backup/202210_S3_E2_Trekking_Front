@@ -8,7 +8,7 @@ import { Expedicion, Proveedor } from '../../model/trekking.model';
   styleUrls: ['./expedicion-list.component.css']
 })
 export class ExpedicionListComponent implements OnInit {
-
+  filterpost = '';
   expediciones: Array<Expedicion> = [];
   @Output() clickDetalle = new EventEmitter<Expedicion>();
 

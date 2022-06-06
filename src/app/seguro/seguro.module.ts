@@ -8,6 +8,8 @@ import { SeguroRoutingModule } from './seguro-routing.module';
 import { CaracteristicasListaModule } from '../components/caracteristicas-lista/caracteristicas-lista.module';
 import { ClientesListaModule } from '../components/clientes-lista/clientes-lista.module';
 import { CondicionesListaModule } from '../components/condiciones-lista/condiciones-lista.module';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipeSeguro';
 
 @NgModule({
   imports: [
@@ -17,9 +19,10 @@ import { CondicionesListaModule } from '../components/condiciones-lista/condicio
     CaracteristicasListaModule,
     ClientesListaModule,
     CondicionesListaModule,
-    SeguroRoutingModule
+    SeguroRoutingModule,
+    FormsModule,
   ],
-  declarations: [SeguroListComponent, SeguroDetalleComponent],
+  declarations: [SeguroListComponent, SeguroDetalleComponent, FilterPipe],
   exports: [SeguroListComponent]
 })
 export class SeguroModule { }

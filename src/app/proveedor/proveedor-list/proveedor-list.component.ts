@@ -8,7 +8,7 @@ import { Proveedor } from '../../model/trekking.model';
   styleUrls: ['./proveedor-list.component.css']
 })
 export class ProveedorListComponent implements OnInit {
-
+  filterpost = '';
   proveedores: Array<Proveedor> = [];
   @Output() clickDetalle = new EventEmitter<Proveedor>();
 
