@@ -1,33 +1,31 @@
 <testExecutions version="1">
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should render title" duration="57"/>
+    <testCase name="AppComponent should have as title 'museums-front'" duration="8"/>
+    <testCase name="AppComponent should create the app" duration="5"/>
+  </file>
   <file path="src/app/seguro/seguro-list/seguro-list.component.spec.ts">
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="25"/>
+    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de latitud " duration="10"/>
+    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de id " duration="8"/>
+    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de longitud " duration="8"/>
+    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de latitud " duration="8"/>
+    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de longitud " duration="9"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="2"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="55"/>
-    <testCase name="AppComponent should have as title 'museums-front'" duration="9"/>
-    <testCase name="AppComponent should create the app" duration="9"/>
-  </file>
-  <file path="src/app/seguro/seguro-list/seguro-list.component.spec.ts">
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de longitud " duration="23"/>
-    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de longitud " duration="11"/>
-    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de latitud " duration="12"/>
-    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de latitud " duration="10"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="12"/>
-    <testCase name="ProveedorDetalleComponent Deberia contener un atributo de id " duration="13"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="2"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="3"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="1"/>
-    <testCase name="ProveedorDetalleComponent should create" duration="3"/>
+    <testCase name="ProveedorDetalleComponent should create" duration="2"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
     <testCase name="ProveedorDetalleComponent should create" duration="1"/>
