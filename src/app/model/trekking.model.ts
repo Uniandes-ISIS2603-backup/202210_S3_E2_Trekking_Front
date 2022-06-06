@@ -76,7 +76,7 @@ export interface Recomendacion {
   id: number;
   indumentaria: string;
   equipo: string;
-  expedicion: Expedicion;
+
 }
 
 export interface Mapa{

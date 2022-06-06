@@ -70,8 +70,7 @@ describe('ProveedorDetalleComponent', () => {
             {
               id: faker.datatype.number(),
               indumentaria: faker.lorem.sentence(),
-              equipo: faker.lorem.sentence(),
-              expedicion: {} as Expedicion
+              equipo: faker.lorem.sentence()
             }
           ] as Recomendacion[],
       }] as Expedicion[]
