@@ -51,8 +51,6 @@ export class MapaCardComponent implements OnInit {
 
   ngOnInit() {
     this.initMap();
-    console.log(this.expedicion.mapa.latitud1);
-    console.log(this.expedicion.mapa.longitud1);
   }
 
   private initMap(): void {
