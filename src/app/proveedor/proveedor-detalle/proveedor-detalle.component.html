@@ -4,10 +4,10 @@
         <div class = "col-lg">
             <div class="page-section team-member">
                 <div class="text-center margin-foto">
-                  <h2 class="section-heading text-uppercase ">{{ proveedor.nombre }}</h2>
+                  <h2 class="section-heading text-uppercase " id="nombre">{{ proveedor.nombre }}</h2>
                   <h3 class="section-subheading text-muted">proveedor</h3>
                 </div>
-                <img class="mx-auto rounded-circle" src="{{proveedor.foto.url}}" alt="..." />
+                <img class="mx-auto rounded-circle" id ="foto" src="{{proveedor.foto.url}}" alt="..." />
             </div>
         </div>
         <div class = "col-lg">
@@ -41,21 +41,21 @@
                   <img src="\assets\images\Hola1.png" class="ochenta-image">
               </span>
               <h4 class="my-3">Experticia</h4>
-              <p class="text-muted">{{proveedor.experticia}} días</p>
+              <p class="text-muted" id="experticia">{{proveedor.experticia}} días</p>
           </div>
           <div class="col">
             <span>
               <img src="\assets\images\Hola2.png" class="ochenta-image">
             </span>
               <h4 class="my-3">Tipo de proveedor</h4>
-              <p class="text-muted">{{proveedor.tipoDocumento == "Nit"? "Empresa" : "Persona natural"}}</p>
+              <p class="text-muted" id="tipoDocumento">{{proveedor.tipoDocumento == "Nit"? "Empresa" : "Persona natural"}}</p>
           </div>
           <div class="col">
             <span>
               <img src="\assets\images\Hola3.png" class="ochenta-image">
             </span>
               <h4 class="my-3">Teléfono</h4>
-              <p class="text-muted">{{proveedor.telefono}}</p>
+              <p class="text-muted" id="telefono">{{proveedor.telefono}}</p>
           </div>
       </div>
   </div>
@@ -67,7 +67,7 @@
   <div class="container">
       <div class="text-center">
           <h2 class="texto-contacto text-uppercase">Contacta a</h2>
-          <h3 class="nombre-contacto text-muted">{{proveedor.nombre}}</h3>
+          <h3 class="nombre-contacto text-muted" id="nombre2">{{proveedor.nombre}}</h3>
       </div>
       <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="contact">
           <div class="row align-items-stretch mb-5">
