@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { Expedicion, Foto, Itinerario, Mapa, Recomendacion } from 'src/app/model/trekking.model';
 import { faker } from '@faker-js/faker';
+import { By } from '@angular/platform-browser';
 
 describe('ProveedorDetalleComponent', () => {
   let component: ProveedorDetalleComponent;
@@ -82,6 +83,32 @@ describe('ProveedorDetalleComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a nombre', () => {
+    expect(debug.nativeElement.querySelector('#nombre').textContent).toContain(component.proveedor.nombre)
+  });
+
+  it('should have a foto', () => {
+    expect(
+      debug.query(By.css('#foto')).attributes['src']
+    ).toEqual(component.proveedor.foto.url);
+  });
+
+  it('should have a experticia', () => {
+    expect(debug.nativeElement.querySelector('#experticia').textContent).toContain(component.proveedor.experticia)
+  });
+
+  it('should have a telefono', () => {
+    expect(debug.nativeElement.querySelector('#telefono').textContent).toContain(component.proveedor.telefono)
+  });
+
+  it('should have a nombre2', () => {
+    expect(debug.nativeElement.querySelector('#nombre2').textContent).toContain(component.proveedor.nombre)
+  });
+
+  it('should have a tipoDocumento', () => {
+    expect(debug.nativeElement.querySelector('#tipoDocumento').textContent).toContain(component.proveedor.tipoDocumento == "Nit"? "Empresa" : "Persona natural")
   });
 
 });
