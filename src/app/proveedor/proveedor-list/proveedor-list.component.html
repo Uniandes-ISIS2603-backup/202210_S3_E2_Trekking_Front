@@ -1,7 +1,6 @@
 <div class="container margin-top-bottom">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-  <div class="wrapper">
+  <div class="wrapper margin-top-bottom">
     <div class="searchBar">
       <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Buscar" value= "" [(ngModel)]="filterpost" />
       <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
@@ -11,13 +10,13 @@
     </div>
   </div>
 </div>
- <div>
+<div class = "container">
   <div class="row justify-content-start">
       <div class="col-3" *ngFor="let proveedor of proveedores | filter: filterpost">
         <app-proveedor-card [proveedor]="proveedor" (click)="clickProveedor(proveedor)" routerLink="/proveedores/{{proveedor.id}}"></app-proveedor-card>
       </div>
   </div>
- </div>
+</div>
 
 
 

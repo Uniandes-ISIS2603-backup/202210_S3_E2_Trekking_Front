@@ -63,15 +63,15 @@
 
 .leaderboard__name {
   color: #979cb0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.64px;
   margin-left: 12px;
 }
 .leaderboard__value {
   color: #35d8ac;
-  font-weight: 700;
-  font-size: 34px;
+  font-weight: 600;
+  font-size: 20px;
   text-align: left;
 }
 .leaderboard__value > span {
@@ -777,7 +777,7 @@ progress {
 }
 
 .tiny-padding-bottom {
-  padding-top: 2rem !important;
+  padding-top: 0rem !important;
   padding-bottom: 2.8rem !important;
 }
 
@@ -10262,7 +10262,7 @@ p {
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0.5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 .texto-contacto
 {
