@@ -61,7 +61,6 @@ describe('ExpedicionDetalleComponent', () => {
             id: faker.datatype.number(),
             indumentaria: faker.lorem.sentence(),
             equipo: faker.lorem.sentence(),
-            expedicion: {} as Expedicion
           }
         ] as Recomendacion[],
     };

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="text-center">
     <img style = "margin-top: 2rem;" src="../../assets/images/itinerario.png">
-    <h2 style = "color: #37B08A; font-size: 4rem; margin-top: 2rem;">
+    <h2 id = "dia" style = "color: #37B08A; font-size: 4rem; margin-top: 2rem;">
       Itinerario del día {{itinerario.dia}}
     </h2>
   </div>
@@ -10,20 +10,20 @@
     <div style = "background-color: rgb(236, 236, 236); border-radius: 2rem;">
       <div class="text-center">
         <img style = "width: 8rem; padding-top: 1rem; padding-bottom: 1rem; "src="../../assets/images/comida.png">
-        <h3>
+        <h3 id = "titulo-alimentacion">
           Alimentación
         </h3>
-        <p style = "padding-bottom: 1rem;">{{itinerario.alimentacion}}</p>
+        <p id = "alimentacion" style = "padding-bottom: 1rem;">{{itinerario.alimentacion}}</p>
       </div>
     </div>
 
     <div style = "background-color: rgb(236, 236, 236); border-radius: 2rem; margin-bottom: 5rem;">
       <div class="text-center">
         <img style = "width: 8rem; padding-top: 1rem; padding-bottom: 1rem;"src="../../assets/images/cama.png">
-        <h3>
+        <h3 id = "titulo-alojamiento">
           Alojamiento
         </h3>
-        <p style = "padding-bottom: 1rem;">{{itinerario.alojamiento}}</p>
+        <p id = "alojamiento" style = "padding-bottom: 1rem;">{{itinerario.alojamiento}}</p>
       </div>
     </div>
   </div>
